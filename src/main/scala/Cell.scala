@@ -12,5 +12,5 @@ class Alive extends Cell {
 }
 
 class Dead extends Cell {
-    override def toString(): String = " "
+    override def toString(): String = "💀"
 }
