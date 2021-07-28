@@ -2,13 +2,13 @@ package gameoflife
 
 
 object Universe {
-    private val grid_rows = 10 
+    private val grid_rows = 10
     private val grid_columns = 10
     
     var grid: Array[Array[Cell]] = generate_grid
     
     def update_grid: Unit = {
-        var new_grid = this.grid
+        var new_grid = generate_empty_grid
         for (i <- 0 to grid_rows - 1; 
              j <- 0 to grid_columns - 1) {
                 var current_cell = this.grid(i)(j)
@@ -23,6 +23,15 @@ object Universe {
         (for (i <- 0 to grid_rows - 1) yield {
             for (j <- 0 to grid_columns - 1) yield {
                 new Cell(i, j, alive = random_cell.nextInt(2))
+                } 
+            }.toArray
+        ).toArray
+    }
+
+    def generate_empty_grid: Array[Array[Cell]] = {
+        (for (i <- 0 to grid_rows - 1) yield {
+            for (j <- 0 to grid_columns - 1) yield {
+                new Cell(i, j, 0)
                 } 
             }.toArray
         ).toArray
