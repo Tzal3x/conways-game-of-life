@@ -8,7 +8,7 @@ class Cell(val x: Int, val y: Int, var alive: Int){
     override def toString(): String = if (alive == 1) "☐" else " "
 
     def count_neightbors(grid: Array[Array[Cell]]): Int = {
-        val bound = grid.length  // assuming that #rows==#cols
+        val bound = grid.length - 1 // assuming that #rows==#cols
         
         (for (i <- (x-1) to (x+1);
               j <- (y-1) to (y+1)) yield {
