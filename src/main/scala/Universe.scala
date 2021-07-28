@@ -3,7 +3,7 @@ package gameoflife
 
 object Universe {
     private val grid_rows = 10
-    private val grid_columns = 10
+    private val grid_columns = grid_rows
     
     var grid: Array[Array[Cell]] = generate_grid
     
