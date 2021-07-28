@@ -2,8 +2,10 @@ package gameoflife
 
 
 object Display {
-    def show(grid: Array[Array[Cell]]): Unit = {
-        println(grid_formatted(grid))
+    def show(grid: Array[Array[Cell]], round: Int, cells: Int): Unit = {
+        System.out.flush()
+        println("[ Welcome to Conway's Game of Life! ]")
+        System.out.print(grid_formatted(grid) + s"[Round: $round][Cells: $cells]\n")
     }
 
     def grid_formatted(grid: Array[Array[Cell]]): String = {
