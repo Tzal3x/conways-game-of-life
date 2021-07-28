@@ -10,7 +10,9 @@ object Universe {
     // def update_grid: Unit = {
     //     var new_grid = dead_grid
     //     for (i <- 0 to grid_rows - 1; j <- 0 to grid_columns - 1) {
-    //         new_grid(i)(j) = ???
+    //         var current_cell = this.grid(i)(j)
+    //         var new_cell = current_cell.live_or_die
+    //         new_grid(i)(j) = new_cell
     //     }
     //     this.grid = new_grid
     // }
