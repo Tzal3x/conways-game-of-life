@@ -28,5 +28,5 @@ object Universe {
         ).toArray
     }
 
-
+    def alive_cells: Int = Universe.grid.map(_.map(_.alive).sum).sum
 }
