@@ -2,11 +2,11 @@ package gameoflife
 
 
 object Display {
-    def show(grid: Array[Array[_ <: Cell]]): Unit = {
+    def show(grid: Array[Array[Cell]]): Unit = {
         println(grid_formatted(grid))
     }
 
-    def grid_formatted(grid: Array[Array[_ <: Cell]]): String = {
+    def grid_formatted(grid: Array[Array[Cell]]): String = {
         val grid_rows: Int = grid(0).length
         val grid_columns: Int = grid.length
 
