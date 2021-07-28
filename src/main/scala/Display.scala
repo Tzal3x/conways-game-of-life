@@ -4,7 +4,7 @@ package gameoflife
 object Display {
     def show(grid: Array[Array[Cell]], round: Int, cells: Int): Unit = {
         System.out.flush()
-        println("[ Welcome to Conway's Game of Life! ]")
+        println("[Conway's Game of Life!]")
         System.out.print(grid_formatted(grid) + s"[Round: $round][Cells: $cells]\n")
     }
 
