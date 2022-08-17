@@ -14,10 +14,14 @@ object Life {
     Thread.sleep(1000)
     // readLine()
     if (num_cells == 0) {
-      println("No cells alive, terminating program.")
+      println("No cells alive: terminating program.")
       return
     }
-    else{
+    else if (round > 100) {
+      println("Iteration limit reached: terminating program.")
+      return 
+    }
+    else {
       Universe.update_grid
       loop(round + 1)
     }
